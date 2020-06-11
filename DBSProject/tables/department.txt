@@ -1,0 +1,10 @@
+CREATE TABLE `department` (
+`dept_name` varchar(45) NOT NULL,
+
+`building` int NOT NULL,
+
+`budget` int NOT NULL,
+
+PRIMARY KEY (`dept_name`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

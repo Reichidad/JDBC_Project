@@ -84,6 +84,7 @@ public class StudentController implements Initializable{
     private Node initPagination(int index) {
         takesProps = connect.createTakesData(id);
         int rowCount = 9;
+        pagination.setPageCount(takesProps.size() / rowCount + 5);
         int fromNum = index * rowCount;
         int toNum = Math.min(fromNum + rowCount, takesProps.size());
         if(fromNum <= takesProps.size())

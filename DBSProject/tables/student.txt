@@ -1,0 +1,16 @@
+CREATE TABLE `student` (
+
+  `ID` int NOT NULL,
+
+  `name` varchar(45) NOT NULL,
+
+  `dept_name` varchar(45) NOT NULL,
+
+  `tot_cred` int NOT NULL,
+  PRIMARY KEY (`ID`),
+
+  KEY `dept_name_idx` (`dept_name`),
+
+  CONSTRAINT `dept_name` FOREIGN KEY (`dept_name`) REFERENCES `department` (`dept_name`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

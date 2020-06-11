@@ -1,0 +1,24 @@
+CREATE TABLE `takes` (
+
+  `ID` int NOT NULL,
+
+  `course_id` int NOT NULL,
+
+  `sec_id` int NOT NULL,
+  `semester` int NOT NULL,
+
+  `year` int NOT NULL,
+
+  `grade` decimal(2,1) DEFAULT NULL,
+
+  PRIMARY KEY (`ID`,`course_id`,`sec_id`,`semester`,`year`),
+
+  KEY `takes_course_id_idx` (`course_id`),
+
+  KEY `takes_composite_idx` (`semester`,`year`),
+
+  CONSTRAINT `ID` FOREIGN KEY (`ID`) REFERENCES `student` (`ID`),
+
+  CONSTRAINT `takes_course_id` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

@@ -1,0 +1,21 @@
+CREATE TABLE `course` (
+
+  `course_id` int NOT NULL,
+
+  `title` varchar(45) NOT NULL,
+
+  `dept_name` varchar(45) NOT NULL,
+
+  `credits` int NOT NULL,
+  `category` varchar(45) NOT NULL,
+
+  PRIMARY KEY (`course_id`),
+  KEY `dept_name_idx` (`dept_name`),
+
+  KEY `category_idx` (`category`),
+
+  KEY `course_composite_idx` (`dept_name`,`category`),
+
+  CONSTRAINT `course_dept_name` FOREIGN KEY (`dept_name`) REFERENCES `department` (`dept_name`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

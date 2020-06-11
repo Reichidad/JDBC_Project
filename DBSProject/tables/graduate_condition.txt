@@ -1,0 +1,13 @@
+CREATE TABLE `graduate_condition` (
+
+  `dept_name` varchar(45) NOT NULL,
+
+  `category` varchar(45) NOT NULL,
+
+  `condition_credits` int NOT NULL,
+
+  PRIMARY KEY (`dept_name`,`category`),
+
+  CONSTRAINT `g_c_dept_name` FOREIGN KEY (`dept_name`) REFERENCES `department` (`dept_name`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
