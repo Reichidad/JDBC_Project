@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StudentController">
+   <children>
+      <Pane layoutX="100.0" layoutY="3.0" prefHeight="400.0" prefWidth="500.0">
+         <children>
+            <Pagination fx:id="pagination" maxPageIndicatorCount="5" pageCount="10" prefHeight="400.0" prefWidth="500.0" />
+            <TableView fx:id="takes" layoutX="25.0" layoutY="22.0" prefHeight="329.0" prefWidth="450.0">
+              <columns>
+                <TableColumn fx:id="tableTitle" prefWidth="113.0" text="title" />
+                <TableColumn fx:id="tableDeptName" prefWidth="76.0" text="dept_name" />
+                  <TableColumn fx:id="tableCategory" prefWidth="70.0" text="category" />
+                  <TableColumn fx:id="tableCredits" prefWidth="47.0" text="credits" />
+                  <TableColumn fx:id="tableSemester" prefWidth="63.0" text="semester" />
+                  <TableColumn fx:id="tableYear" prefWidth="38.0" text="year" />
+                  <TableColumn fx:id="tableGrade" prefWidth="42.0" text="grade" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane prefHeight="403.0" prefWidth="100.0" style="-fx-background-color: grey;">
+         <children>
+            <Label fx:id="idLabel" alignment="CENTER" layoutY="54.0" prefWidth="100.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                   <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="graduateBtn" layoutX="13.0" layoutY="356.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="74.0" text="졸업요건" />
+            <Button fx:id="semesterBtn" layoutX="13.0" layoutY="309.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="74.0" text="학기별" />
+            <Label fx:id="avgLabel" alignment="CENTER" layoutY="146.0" prefWidth="100.0" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="sumLabel" alignment="CENTER" layoutY="100.0" prefHeight="18.0" prefWidth="100.0" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="275.0" style="-fx-text-fill: white;" text="Search By" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="31.0" text="학번" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="77.0" text="취득학점" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="123.0" text="평균평점" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

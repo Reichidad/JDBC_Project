@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" prefWidth="327.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SemesterController">
+   <children>
+      <TableView fx:id="semesterTable" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="244.0" prefWidth="299.0">
+         <columns>
+            <TableColumn fx:id="year" prefWidth="75.0" text="Year" />
+            <TableColumn fx:id="semester" prefWidth="75.0" text="Semester" />
+            <TableColumn fx:id="credits" prefWidth="75.0" text="Credits" />
+            <TableColumn fx:id="gradeAvg" prefWidth="75.0" text="Grade Avg" />
+         </columns>
+      </TableView>
+      <Button fx:id="closeBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="275.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="103.0" text="닫기" />
+   </children>
+</Pane>
